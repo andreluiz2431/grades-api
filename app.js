@@ -27,6 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
+    // endereço do front
     origin: 'http://localhost:8080',
   })
 );
