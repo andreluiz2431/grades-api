@@ -28,10 +28,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
-  cors({
-    // endereço do front
-    origin: 'https://grade-front-app.herokuapp.com/',
-  })
+  cors()
+  //{origin: 'https://grade-front-app.herokuapp.com/'}
 );
 
 app.use(gradeRouter);
