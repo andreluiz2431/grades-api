@@ -4,15 +4,14 @@ import { logger } from '../config/logger.js';
 const grade = db.grade;
 
 const create = async (req, res) => {
-  const { name, subject, type, value } = req.body;
-  const Grade = new Grade({
-    name: name,
-    subject: subject,
-    type: type,
-    value: value,
+  const GradeBD = new grade({
+    name: req.body.name,
+    subject: req.body.subject,
+    type: req.body.type,
+    value: req.body.value,
   });
   try {
-    await grade.save(Grade);
+    await grade.save(GradeBD);
     res.send({ message: 'Grade inserido com sucesso' });
     logger.info(`POST /grade - ${JSON.stringify()}`);
   } catch (error) {
