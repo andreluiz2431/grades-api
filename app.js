@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
     // endereço do front
-    origin: 'http://localhost:3000/',
+    origin: 'http://192.168.1.11:3000/',
   })
 );
 
