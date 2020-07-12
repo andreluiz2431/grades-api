@@ -12,7 +12,7 @@ const create = async (req, res) => {
     value: value,
   });
   try {
-    await grade.save(Grade);
+    await Grade.save(grade);
     res.send({ message: 'Grade inserido com sucesso' });
     logger.info(`POST /grade - ${JSON.stringify()}`);
   } catch (error) {
