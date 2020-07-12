@@ -5,14 +5,14 @@ const grade = db.grade;
 
 const create = async (req, res) => {
   const { name, subject, type, value } = req.body;
-  const grade = new Grade({
+  const Grade = new Grade({
     name: name,
     subject: subject,
     type: type,
     value: value,
   });
   try {
-    await Grade.save(grade);
+    await grade.save(Grade);
     res.send({ message: 'Grade inserido com sucesso' });
     logger.info(`POST /grade - ${JSON.stringify()}`);
   } catch (error) {
