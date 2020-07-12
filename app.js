@@ -12,8 +12,10 @@ import { db } from './models/index.js';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+    console.log('Conectado ao BD');
     logger.info('Conectado ao banco de dados');
   } catch (error) {
+    console.log('Erro ao conectar ao BD');
     logger.error(`Erro ao conectar no banco de dados! ${error}`);
 
     process.exit();

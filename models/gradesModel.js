@@ -4,7 +4,7 @@ export default (mongoose) => {
     subject: { type: String, required: true },
     type: { type: String, required: true },
     value: { type: Number, required: true },
-    lastModified: { type: String, required: true },
+    lastModified: { type: Date, required: Date.now },
   });
 
   schema.method('toJSON', function () {

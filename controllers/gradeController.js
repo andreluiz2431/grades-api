@@ -54,7 +54,7 @@ const findOne = async (req, res) => {
   try {
     const data = await Grade.findById({ _id: id });
 
-    if (!data) {
+    if (!data.lenght) {
       res.status(404).send({ message: 'Grade não encontrado' });
     } else {
       res.send(data);
