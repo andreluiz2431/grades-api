@@ -52,7 +52,7 @@ const findOne = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const data = await Grade.findById({ _id: id });
+    const data = await grade.findById({ _id: id });
 
     if (!data.lenght < 1) {
       res.status(404).send({ message: 'Grade não encontrado' });
@@ -76,7 +76,7 @@ const update = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const data = await Grade.findByIdAndUpdade({ _id: id }, req.body, {
+    const data = await grade.findByIdAndUpdade({ _id: id }, req.body, {
       new: true,
     });
 
@@ -96,7 +96,7 @@ const remove = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const data = await Grade.findByIdAndDelete({ _id: id });
+    const data = await grade.findByIdAndDelete({ _id: id });
 
     if (!data.lenght < 1) {
       res.status(404).send({ message: 'Grade não encontrado' });
@@ -116,7 +116,7 @@ const removeAll = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const data = await Grade.deleteMany();
+    const data = await grade.deleteMany();
 
     if (!data.lenght < 1) {
       res.status(404).send({ message: 'Grades não encontrados' });
