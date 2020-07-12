@@ -4,13 +4,12 @@ import { logger } from '../config/logger.js';
 const grade = db.grade;
 
 const create = async (req, res) => {
-  const { name, subject, type, value, lastModified } = req.body;
+  const { name, subject, type, value } = req.body;
   const grade = new Grade({
-    name,
-    subject,
-    type,
-    value,
-    lastModified,
+    name: name,
+    subject: subject,
+    type: type,
+    value: value,
   });
   try {
     await grade.save(Grade);
