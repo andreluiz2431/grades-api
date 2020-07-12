@@ -9,7 +9,6 @@ const create = async (req, res) => {
     subject: req.body.subject,
     type: req.body.type,
     value: req.body.value,
-    lastModified: new Date(),
   });
   try {
     await GradeBD.save(GradeBD);
