@@ -33,8 +33,8 @@ const findAll = async (req, res) => {
     : {};
 
   try {
-    const data = await Grade.find(condition);
-    if (!data.lenght) {
+    const data = await grade.find(condition);
+    if (!data.lenght < 1) {
       res.status(404).send({ message: 'Nenhum grade encontrado' });
     } else {
       res.send(data);
