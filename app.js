@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
     // endereço do front
-    origin: 'https://grade-front-app.herokuapp.com',
+    origin: 'https://grade-front-app.herokuapp.com/',
   })
 );
 
